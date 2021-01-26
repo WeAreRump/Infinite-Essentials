@@ -201,6 +201,9 @@ UserInputService.InputBegan:Connect(function(Input, Chat)
 				SendNotification("Exiting","Exiting game ...",60)
 				game:Shutdown()
 			end
+			
+			CommandBarMain.Visible = false
+			IsFocused = false
 		end
 	end
 end)

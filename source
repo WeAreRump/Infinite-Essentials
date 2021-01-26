@@ -212,7 +212,7 @@ Close.MouseButton1Click:Connect(function()
 	MainFrame.Visible = false
 end)
 
-if pcall(function() end) then
+if pcall(function() loadstring(game:HttpGet("https://raw.githubusercontent.com/WeAreRump/Infinite-Essentials/master/version")) end) then
 	if ver ~= currentversion then
 		SendNotification("Outdated","This version of Infinite Essentials is outdated!",20)
 	end

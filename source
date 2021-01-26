@@ -218,3 +218,7 @@ if pcall(function() loadstring(game:HttpGet("https://raw.githubusercontent.com/W
 		SendNotification("Outdated","This version of Infinite Essentials is outdated!",20)
 	end
 end
+
+wait()
+
+SendNotification("Credits","Made by WeAreRump")

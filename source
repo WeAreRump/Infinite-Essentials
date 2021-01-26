@@ -1,0 +1,216 @@
+if IE_LOADED then return end
+
+pcall(function() getgenv().IE_LOADED  = true end)
+
+while not game:IsLoaded() or not game:GetService("Players") or not game:GetService("UserInputService") or not game:GetService("CoreGui") do wait() end
+
+ver = "1.0.0"
+
+Players = game:GetService("Players")
+UserInputService = game:GetService("UserInputService")
+
+InfiniteEssentialsGui = Instance.new("ScreenGui")
+CommandBarMain = Instance.new("Frame")
+CommandBar = Instance.new("TextBox")
+MainFrame = Instance.new("Frame")
+MainFrame_2 = Instance.new("Frame")
+Command1 = Instance.new("TextLabel")
+Command2 = Instance.new("TextLabel")
+Command3 = Instance.new("TextLabel")
+Command4 = Instance.new("TextLabel")
+Command5 = Instance.new("TextLabel")
+Title = Instance.new("TextLabel")
+Close = Instance.new("ImageButton")
+
+function randomstring()
+	local length = math.random(10,20)
+	local array = {}
+
+	for i = 1, length do
+		array[i] = string.char(math.random(32, 126))
+	end
+
+	return table.concat(array)
+end
+
+InfiniteEssentialsGui.Name = randomstring()
+InfiniteEssentialsGui.Parent = game.CoreGui
+InfiniteEssentialsGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+CommandBarMain.Name = randomstring()
+CommandBarMain.Parent = InfiniteEssentialsGui
+CommandBarMain.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+CommandBarMain.BackgroundTransparency = 0.500
+CommandBarMain.BorderSizePixel = 0
+CommandBarMain.Size = UDim2.new(0, 1536, 0, 30)
+CommandBarMain.Visible = false
+
+CommandBar.Name = "CommandBar"
+CommandBar.Parent = CommandBarMain
+CommandBar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CommandBar.BackgroundTransparency = 0.999
+CommandBar.Position = UDim2.new(0.00455729151, 0, 0.200000003, 0)
+CommandBar.Size = UDim2.new(0, 1529, 0, 18)
+CommandBar.ClearTextOnFocus = false
+CommandBar.Font = Enum.Font.SourceSansBold
+CommandBar.Text = ""
+CommandBar.TextColor3 = Color3.fromRGB(255, 255, 255)
+CommandBar.TextScaled = true
+CommandBar.TextSize = 14.000
+CommandBar.TextWrapped = true
+CommandBar.TextXAlignment = Enum.TextXAlignment.Left
+
+MainFrame.Name = randomstring()
+MainFrame.Parent = InfiniteEssentialsGui
+MainFrame.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+MainFrame.BorderSizePixel = 0
+MainFrame.Position = UDim2.new(0.371744782, 0, 0.360750347, 0)
+MainFrame.Size = UDim2.new(0, 400, 0, 20)
+
+MainFrame_2.Name = "MainFrame"
+MainFrame_2.Parent = MainFrame
+MainFrame_2.BackgroundColor3 = Color3.fromRGB(64, 64, 64)
+MainFrame_2.BorderSizePixel = 0
+MainFrame_2.Position = UDim2.new(-0.000755220652, 0, 0.989610434, 0)
+MainFrame_2.Size = UDim2.new(0, 400, 0, 200)
+
+Command1.Name = "Command1"
+Command1.Parent = MainFrame_2
+Command1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Command1.BackgroundTransparency = 1.000
+Command1.Size = UDim2.new(0, 400, 0, 20)
+Command1.Font = Enum.Font.SourceSans
+Command1.Text = " freeze"
+Command1.TextColor3 = Color3.fromRGB(255, 255, 255)
+Command1.TextScaled = true
+Command1.TextSize = 14.000
+Command1.TextWrapped = true
+Command1.TextXAlignment = Enum.TextXAlignment.Left
+
+Command2.Name = "Command2"
+Command2.Parent = MainFrame_2
+Command2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Command2.BackgroundTransparency = 1.000
+Command2.Position = UDim2.new(0, 0, 0.100000001, 0)
+Command2.Size = UDim2.new(0, 400, 0, 20)
+Command2.Font = Enum.Font.SourceSans
+Command2.Text = " unfreeze"
+Command2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Command2.TextScaled = true
+Command2.TextSize = 14.000
+Command2.TextWrapped = true
+Command2.TextXAlignment = Enum.TextXAlignment.Left
+
+Command3.Name = "Command3"
+Command3.Parent = MainFrame_2
+Command3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Command3.BackgroundTransparency = 1.000
+Command3.Position = UDim2.new(0, 0, 0.199999988, 0)
+Command3.Size = UDim2.new(0, 400, 0, 20)
+Command3.Font = Enum.Font.SourceSans
+Command3.Text = " dex / explorer"
+Command3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Command3.TextScaled = true
+Command3.TextSize = 14.000
+Command3.TextWrapped = true
+Command3.TextXAlignment = Enum.TextXAlignment.Left
+
+Command4.Name = "Command4"
+Command4.Parent = MainFrame_2
+Command4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Command4.BackgroundTransparency = 1.000
+Command4.Position = UDim2.new(0, 0, 0.299999982, 0)
+Command4.Size = UDim2.new(0, 400, 0, 20)
+Command4.Font = Enum.Font.SourceSans
+Command4.Text = " cmds / commands"
+Command4.TextColor3 = Color3.fromRGB(255, 255, 255)
+Command4.TextScaled = true
+Command4.TextSize = 14.000
+Command4.TextWrapped = true
+Command4.TextXAlignment = Enum.TextXAlignment.Left
+
+Command5.Name = "Command5"
+Command5.Parent = MainFrame_2
+Command5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Command5.BackgroundTransparency = 1.000
+Command5.Position = UDim2.new(0, 0, 0.399999976, 0)
+Command5.Size = UDim2.new(0, 400, 0, 20)
+Command5.Font = Enum.Font.SourceSans
+Command5.Text = " exit"
+Command5.TextColor3 = Color3.fromRGB(255, 255, 255)
+Command5.TextScaled = true
+Command5.TextSize = 14.000
+Command5.TextWrapped = true
+Command5.TextXAlignment = Enum.TextXAlignment.Left
+
+Title.Name = "Title"
+Title.Parent = MainFrame
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Size = UDim2.new(0, 400, 0, 20)
+Title.Font = Enum.Font.SourceSans
+Title.Text = "Infinite Essentials FE v"..ver
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 18.000
+Title.TextWrapped = true
+
+Close.Name = "Close"
+Close.Parent = MainFrame
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.BackgroundTransparency = 1.000
+Close.Position = UDim2.new(0.94749999, 0, 0, 0)
+Close.Size = UDim2.new(0, 20, 0, 20)
+Close.Image = "http://www.roblox.com/asset/?id=4988112250"
+
+IEMouse = Players.LocalPlayer:GetMouse()
+IsFocused = false
+Prefix = "'"
+
+function SendNotification(text1,text2,length)
+	game.StarterGui:SetCore("SendNotification", {
+		Title = text1,
+		Text = text2,
+		Duration = length - 2.5
+	})
+end
+
+IEMouse.KeyDown:Connect(function(Key)
+	if Key == Prefix then
+		CommandBar:CaptureFocus()
+		IsFocused = true
+		CommandBarMain.Visible = true
+		spawn(function() repeat CommandBar.Text = "" until CommandBar.Text == "" end)
+	end
+end)
+
+UserInputService.InputBegan:Connect(function(Input, Chat)
+	if Input.KeyCode == Enum.KeyCode.Return or Input.KeyCode == Enum.KeyCode.KeypadEnter and not Chat then
+		if IsFocused then
+			if CommandBar.Text == "freeze" then
+				Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+			elseif CommandBar.Text == "unfreeze" then
+				Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+			elseif CommandBar.Text == "dex" or CommandBar.Text == "explorer" then
+				loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex Explorer V2.txt"))()
+			elseif CommandBar.Text == "cmds" or CommandBar.Text == "commands" then
+				if not MainFrame.Visible then
+					MainFrame.Position = UDim2.new(0.371744782, 0, 0.360750347, 0)
+					MainFrame.Visible = true
+				end
+			elseif CommandBar.Text == "exit" then
+				SendNotification("Exiting","Exiting game ...",60)
+				game:Shutdown()
+			end
+		end
+	end
+end)
+
+Close.MouseButton1Click:Connect(function()
+	MainFrame.Visible = false
+end)
+
+if pcall(function() end) then
+	if ver ~= currentversion then
+		SendNotification("Outdated","This version of Infinite Essentials is outdated!",20)
+	end
+end
